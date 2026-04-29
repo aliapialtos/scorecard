@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <title>Career Scorecard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module">
-      import React from "https://esm.sh/react";
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-type="module">
+     import React, { useMemo, useState } from "https://esm.sh/react";
       import { createRoot } from "https://esm.sh/react-dom/client";
 
       // 👇 PASTE YOUR ENTIRE CANVAS CODE BELOW THIS LINE
@@ -256,7 +257,7 @@ function ScoreBar({ label, score, maxScore }) {
   );
 }
 
-export default function CareerExplorationStyleScorecard() {
+function CareerExplorationStyleScorecard() {
   const [started, setStarted] = useState(false);
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState({});
