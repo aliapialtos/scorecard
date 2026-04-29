@@ -123,7 +123,7 @@ const styleProfiles = {
     description:
       "You love to jump in, test, and see what fits. You are curious, flexible, and willing to learn by doing instead of waiting until everything is perfectly clear. This is a powerful strength because many career paths are discovered through real experiences, small experiments, and unexpected opportunities. You may not always know exactly where something is leading, but you are good at gathering clues by taking action.",
     watchOut:
-      "Watch out for starting lots of things but not finishing, or judging yourself if something does not click right away.",
+      "Be mindful of starting lots of things but not finishing, or judging yourself if something does not click right away.",
     steps: [
       "Pick 2 mini-experiments this week, like visiting a club, joining a challenge, or trying a new hobby.",
       "Rate each experience: what you liked, what you did not like, and what surprised you.",
@@ -137,7 +137,7 @@ const styleProfiles = {
     description:
       "You feel most confident when you have a plan and know what is coming next. You are organized, reliable, and great at turning big ideas into clear steps. This is a powerful strength because non-traditional paths still need structure, follow-through, and decision-making. You may be the kind of person who can make an unfamiliar path feel less overwhelming by breaking it into smaller moves.",
     watchOut:
-      "Watch out for overthinking or waiting until everything feels perfect. Sometimes it is okay to start before you see the whole path.",
+      "Be mindful of overthinking or waiting until everything feels perfect. Sometimes it is okay to start before you see the whole path.",
     steps: [
       "Make a 2-week plan with 3 tiny actions, like researching a club, attending an event, or talking to someone in a field you like.",
       "Set a clear deadline for each action.",
@@ -151,7 +151,7 @@ const styleProfiles = {
     description:
       "You are thoughtful, thorough, and great at spotting important details others might miss. You like understanding the facts before deciding what to try, which can help you make confident and informed choices. This is a powerful strength because the world is full of careers most students have never heard of yet. Your curiosity can help you uncover hidden options, ask better questions, and make sense of what is possible.",
     watchOut:
-      "Watch out for analysis paralysis. Sometimes you need to act before knowing everything.",
+      "Be mindful of analysis paralysis. Sometimes you need to act to know what to do next. Experience can be a fantastic teacher too.",
     steps: [
       "Watch or read 3 credible day-in-the-life stories about careers that interest you.",
       "Write down 5 things that surprised you.",
@@ -165,7 +165,7 @@ const styleProfiles = {
     description:
       "You get energy from talking things out and hearing real stories. You are a natural relationship-builder, great at asking questions, and quick to make new friends. This is a powerful strength because many career opportunities start with conversations, mentors, introductions, and shared ideas. You may learn best when you can hear how real people found their way, then use those stories to imagine what might be possible for you.",
     watchOut:
-      "Watch out for letting other people’s opinions shape your path too much. Your interests matter too.",
+      "Be mindful of letting other people’s opinions shape your path too much. Your interests matter too.",
     steps: [
       "Reach out to 2 people in careers or activities you are curious about.",
       "Ask them the same 3 questions: what they enjoy most, what surprised them, and what they wish they knew in high school.",
@@ -179,7 +179,7 @@ const styleProfiles = {
     description:
       "Whether it is writing, art, videos, projects, designs, or new ideas, you learn by building and sharing. You are imaginative, expressive, and able to turn inspiration into something real. This is a powerful strength because non-traditional paths often reward people who can create, communicate, and bring fresh ideas into the world. You may discover your direction by making things that show what you care about and what you are capable of.",
     watchOut:
-      "Watch out for getting stuck in your own head or being too critical of your work.",
+      "Be mindful of getting stuck in your own head or being too critical of your work.",
     steps: [
       "Start a tiny project this week: a poster, short video, mini portfolio piece, or anything about something you care about.",
       "Share your creation with someone you trust.",
@@ -394,7 +394,7 @@ function CareerExplorationStyleScorecard() {
             <div className="text-center">
               <div className="text-5xl">{profile.icon}</div>
               <h1 className="text-4xl font-bold mt-4">{results.topStyle}</h1>
-              <p className="text-lg sm:text-xl text-slate-800 mt-2">{profile.short}</p>
+              <p className="text-lg text-slate-800 mt-2 text-center leading-snug">{profile.short}</p>
             </div>
 
             <div className="mt-6 text-slate-700 leading-relaxed">{profile.description}</div>
@@ -406,7 +406,7 @@ function CareerExplorationStyleScorecard() {
             <div className="mt-8 rounded-2xl border bg-white p-5">
               <h2 className="text-xl font-bold">Your mix</h2>
               <p className="mt-2 text-sm text-slate-800">
-                You’re not just one thing. Everyone is a mix of different strengths, and this can change over time as you try new things, meet new people, and learn more about yourself. Think of this as a snapshot of how you explore right now—not a label you’re stuck with.
+                You’re not just one thing. Everyone is a mix of different strengths, and your primary lens can change over time as you try new things, meet new people, and learn more about yourself. Think of this as a snapshot of how you explore right now—not a label you’re stuck with.
               </p>
               <div className="mt-4 space-y-3">
                 {styleOrder.map((style) => {
@@ -458,7 +458,7 @@ function CareerExplorationStyleScorecard() {
   <p className="mt-2">
     Artist / educator / CEO / business owner / now amateur developer
   </p>
-  <p>Notre Dame Academy, Class of 2005</p>
+  <p>NDA, Class of 2005</p>
   <p className="mt-2">
     Questions? Get in touch:{" "}
     <a href="mailto:alia@gooverseas.com" className="font-bold underline">
@@ -500,10 +500,10 @@ function CareerExplorationStyleScorecard() {
                 <button
                   key={a.style}
                   onClick={() => chooseAnswer(a.style)}
-                  className={`w-full text-left p-4 rounded-xl border transition ${selected ? "bg-indigo-600 text-white" : "bg-white hover:bg-slate-100"}`}
+                  className={`w-full text-left p-3 rounded-xl border transition ${selected ? "bg-indigo-600 text-white" : "bg-white hover:bg-slate-100"}`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-sm font-bold">
                       {String.fromCharCode(65 + currentQuestion.answers.indexOf(a))}
                     </span>
                     <div className="font-semibold">{a.text}</div>
