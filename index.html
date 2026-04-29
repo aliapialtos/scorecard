@@ -346,6 +346,18 @@ function CareerExplorationStyleScorecard() {
               <p className="mt-6 text-lg text-slate-800 max-w-xl">
                 Discover how you naturally explore ideas, careers, and opportunities. You’ll get a <span className="bg-teal-100 px-1.5 py-0.5 rounded"><strong>Personalized Career Exploration Profile</strong></span> and three next steps designed to help guide you. Learn which one fits you best!
               </p>
+              <div className="mt-8 rounded-2xl border bg-slate-50 p-5 text-sm text-slate-800">
+  <p className="font-bold">A note from the creator</p>
+  <p className="mt-2">
+    I believe that the most fulfilling way to build a non-traditional career is to commit to learning constantly.
+  </p>
+  <p className="mt-2">
+    This is the first web application and technical deployment I’ve ever made. It’s not perfect, but I learned a lot about this process in a short amount of time.
+  </p>
+  <p className="mt-2">
+    I created it in 2 hours using AI tools the night before the 2026 NDA Career Day on Apr 29, 2026 as an MVP and tool for the Non-Traditional Career Paths panel.
+  </p>
+</div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <button onClick={() => setStarted(true)} className="bg-indigo-600 text-white px-6 py-4 rounded-2xl text-lg font-semibold hover:bg-indigo-500">
                   Start Quiz →
@@ -440,7 +452,19 @@ function CareerExplorationStyleScorecard() {
                 ))}
               </div>
             </div>
-
+<div className="mt-8 rounded-2xl border bg-slate-50 p-5 text-sm text-slate-800">
+  <p className="font-bold">Created by Alia Pialtos</p>
+  <p className="mt-2">
+    Artist / educator / CEO / business owner / now amateur developer
+  </p>
+  <p>Notre Dame Academy, Class of 2005</p>
+  <p className="mt-2">
+    Questions? Get in touch:{" "}
+    <a href="mailto:alia@gooverseas.com" className="font-bold underline">
+      alia@gooverseas.com
+    </a>
+  </p>
+</div>
             <div className="mt-8 flex gap-3">
               <a
                 href={`mailto:?subject=${resultEmailSubject}&body=${resultEmailBody}`}
