@@ -213,14 +213,21 @@ function Confetti() {
 function QRCodeCard() {
   return (
     <div className="rounded-3xl border bg-white p-5 shadow-sm">
-      <div className="text-sm font-bold uppercase tracking-wide text-slate-900">Scan to take the quiz</div>
-      <div className="mt-4 grid h-40 w-40 grid-cols-7 gap-1 rounded-2xl border bg-white p-3">
-        {Array.from({ length: 49 }, (_, i) => {
-          const filled = [0,1,2,3,4,5,6,7,13,14,16,17,20,21,22,27,28,29,32,34,35,41,42,43,44,45,46,47,48].includes(i) || i % 5 === 0;
-          return <div key={i} className={filled ? "rounded-sm bg-slate-900" : "rounded-sm bg-white"} />;
-        })}
+      <div className="text-sm font-bold uppercase tracking-wide text-slate-900">
+        Scan to take the quiz
       </div>
-      <p className="mt-3 text-sm text-slate-700">Replace this with your real QR code once you have the hosted URL.</p>
+
+      <div className="mt-4 flex justify-center">
+        <img 
+          src="/qr.png" 
+          alt="QR code to take the quiz"
+          className="h-40 w-40 rounded-2xl border"
+        />
+      </div>
+
+      <p className="mt-3 text-sm text-slate-700 text-center">
+        Scan with your phone camera
+      </p>
     </div>
   );
 }
