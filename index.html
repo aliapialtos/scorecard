@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Scorecard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -343,7 +344,7 @@ function CareerExplorationStyleScorecard() {
                 <br />
                 <span className="text-indigo-600">You just need a starting point.</span>
               </h1>
-              <p className="mt-6 text-lg text-slate-800 max-w-xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-800 max-w-xl">
                 Discover how you naturally explore ideas, careers, and opportunities. You’ll get a <span className="bg-teal-100 px-1.5 py-0.5 rounded"><strong>Personalized Career Exploration Profile</strong></span> and three next steps designed to help guide you. Learn which one fits you best!
               </p>
               <div className="mt-8 rounded-2xl border bg-slate-50 p-5 text-sm text-slate-800">
@@ -362,7 +363,7 @@ function CareerExplorationStyleScorecard() {
   </p>
 </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <button onClick={() => setStarted(true)} className="bg-indigo-600 text-white px-6 py-4 rounded-2xl text-lg font-semibold hover:bg-indigo-500">
+                <button onClick={() => setStarted(true)} className="bg-indigo-600 text-white px-6 py-4 rounded-2xl text-lg sm:text-xl font-semibold hover:bg-indigo-500">
                   Start Quiz →
                 </button>
               </div>
@@ -396,7 +397,7 @@ function CareerExplorationStyleScorecard() {
             <div className="text-center">
               <div className="text-5xl">{profile.icon}</div>
               <h1 className="text-4xl font-bold mt-4">{results.topStyle}</h1>
-              <p className="text-lg text-slate-800 mt-2">{profile.short}</p>
+              <p className="text-lg sm:text-xl text-slate-800 mt-2">{profile.short}</p>
             </div>
 
             <div className="mt-6 text-slate-700 leading-relaxed">{profile.description}</div>
